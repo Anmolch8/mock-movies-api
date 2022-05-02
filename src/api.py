@@ -26,5 +26,5 @@ def search_movie():
 
     return jsonify(filtered_results)
 
-
+load_json_dict()
 
