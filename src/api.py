@@ -3,7 +3,7 @@ from json import load
 
 
 # movies dict
-movies = None
+#movies = None
 
 def load_json_dict():
     global movies
