@@ -13,7 +13,7 @@ def load_json_dict():
 
 api = Flask(__name__)
 
-@api.route('/get_movies')
+@api.route('/')
 def get_movies():
     return jsonify(movies)
 
