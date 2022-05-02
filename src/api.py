@@ -12,7 +12,9 @@ def load_json_dict():
         movies = load(json_file)
 
 api = Flask(__name__)
-
+@api.route('/')
+def home():
+    return 'I AM Deployed'
 @api.route('/get_movies')
 def get_movies():
     return jsonify(movies)
