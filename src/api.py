@@ -12,7 +12,9 @@ def load_json_dict():
         movies = load(json_file)
 
 api = Flask(__name__)
-
+@api.route('/')
+def home():
+    return 'I AM Deployed'
 @api.route('/get_movies')
 def get_movies():
     return jsonify(movies)
@@ -26,8 +28,5 @@ def search_movie():
 
     return jsonify(filtered_results)
 
+load_json_dict()
 
-
-if __name__ == '__main__':
-    load_json_dict()
-    api.run(host='0.0.0.0',debug=True)
